@@ -6,6 +6,7 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet var difficultyHintLabel: UILabel!
     @IBOutlet var difficultySlider: UISlider!
+    @IBOutlet var cardSetSegment: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +18,8 @@ class SettingsViewController: UIViewController {
     @objc
     func saveSettings() {
         let difficulty = Difficulty.fromCardsCount(cardsCount: Int(difficultySlider.value)) ?? settings.difficulty
-        let newSetting = Settings(difficulty: difficulty)
+        let cardSet = CardSet(rawValue: cardSetSegment.selectedSegmentIndex) ?? settings.cardSet
+        let newSetting = Settings(difficulty: difficulty, cardSet: cardSet)
         Settings.update(newSettings: newSetting)
         navigationController?.popViewController(animated: true)
     }

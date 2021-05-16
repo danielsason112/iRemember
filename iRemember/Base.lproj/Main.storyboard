@@ -115,23 +115,43 @@
                                     <action selector="onSliderChangeWithSender:" destination="TDP-6f-CxC" eventType="valueChanged" id="09t-Yr-yMr"/>
                                 </connections>
                             </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gcV-5Y-kHB">
+                                <rect key="frame" x="20" y="348" width="194" height="32"/>
+                                <segments>
+                                    <segment title="Pokemon"/>
+                                    <segment title="Flags"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cards:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8q-UF-wUQ">
+                                <rect key="frame" x="20" y="278" width="374" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d7d-z2-Atn"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="egQ-6a-jGd" firstAttribute="top" secondItem="d7d-z2-Atn" secondAttribute="top" constant="60" id="8cz-sY-ugD"/>
+                            <constraint firstItem="H8q-UF-wUQ" firstAttribute="leading" secondItem="d7d-z2-Atn" secondAttribute="leading" constant="20" id="EVz-ax-SDg"/>
+                            <constraint firstItem="d7d-z2-Atn" firstAttribute="trailing" secondItem="gcV-5Y-kHB" secondAttribute="trailing" constant="200" id="HFO-DT-Lvr"/>
                             <constraint firstItem="hc8-t6-jvu" firstAttribute="leading" secondItem="d7d-z2-Atn" secondAttribute="leading" constant="150" id="HgP-hK-lQI"/>
                             <constraint firstItem="Rt3-Rx-545" firstAttribute="leading" secondItem="d7d-z2-Atn" secondAttribute="leading" constant="20" id="Nwm-OK-ddT"/>
+                            <constraint firstItem="H8q-UF-wUQ" firstAttribute="top" secondItem="Rt3-Rx-545" secondAttribute="bottom" constant="50" id="S6r-lw-wym"/>
+                            <constraint firstItem="d7d-z2-Atn" firstAttribute="trailing" secondItem="H8q-UF-wUQ" secondAttribute="trailing" constant="20" id="U10-Qx-cBW"/>
                             <constraint firstItem="d7d-z2-Atn" firstAttribute="trailing" secondItem="hc8-t6-jvu" secondAttribute="trailing" constant="20" id="X5x-hT-mrJ"/>
                             <constraint firstItem="d7d-z2-Atn" firstAttribute="trailing" secondItem="Rt3-Rx-545" secondAttribute="trailing" constant="20" id="azW-ly-zV2"/>
                             <constraint firstItem="egQ-6a-jGd" firstAttribute="leading" secondItem="d7d-z2-Atn" secondAttribute="leading" constant="20" id="fRX-QY-Fbm"/>
+                            <constraint firstItem="gcV-5Y-kHB" firstAttribute="top" secondItem="H8q-UF-wUQ" secondAttribute="bottom" constant="40" id="lHq-hP-KiI"/>
                             <constraint firstItem="hc8-t6-jvu" firstAttribute="bottom" secondItem="egQ-6a-jGd" secondAttribute="bottom" id="ncw-Ye-Jid"/>
                             <constraint firstItem="Rt3-Rx-545" firstAttribute="top" secondItem="hc8-t6-jvu" secondAttribute="bottom" constant="20" id="pBy-bX-CfD"/>
                             <constraint firstItem="hc8-t6-jvu" firstAttribute="leading" secondItem="egQ-6a-jGd" secondAttribute="trailing" constant="10" id="xvu-Zm-jOB"/>
+                            <constraint firstItem="gcV-5Y-kHB" firstAttribute="leading" secondItem="d7d-z2-Atn" secondAttribute="leading" constant="20" id="zly-aH-Nrd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="Wst-n3-Fyx"/>
                     <connections>
+                        <outlet property="cardSetSegment" destination="gcV-5Y-kHB" id="2FC-ov-hS2"/>
                         <outlet property="difficultyHintLabel" destination="hc8-t6-jvu" id="sjj-7K-eSQ"/>
                         <outlet property="difficultySlider" destination="Rt3-Rx-545" id="Oj5-sT-pp2"/>
                     </connections>

@@ -19,8 +19,7 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let cardsCount = settings.difficulty.cardsCount()
-        cardDataSource = CardDataSource(cards: Card.getPokemonGameCards(count: cardsCount), cardButtonAction: self.cardButtonAction)
+        cardDataSource = CardDataSource(cards: Card.getCards(from: settings), cardButtonAction: self.cardButtonAction)
         cardsCollectionViewDelegete = CardsCollectionViewDelegate()
         collectionView.dataSource = cardDataSource
         collectionView.delegate = cardsCollectionViewDelegete

@@ -23,6 +23,33 @@ extension Card {
         Card(id: 12, image: "37")
     ]
     
+    static var flagsCardSet = [
+        Card(id: 1, image: "argentina"),
+        Card(id: 2, image: "france"),
+        Card(id: 3, image: "greece"),
+        Card(id: 4, image: "israel"),
+        Card(id: 5, image: "portugal"),
+        Card(id: 6, image: "singapore"),
+        Card(id: 7, image: "south-korea"),
+        Card(id: 8, image: "spain"),
+        Card(id: 9, image: "sweden"),
+        Card(id: 10, image: "united-kingdom"),
+        Card(id: 11, image: "united-states-of-america"),
+        Card(id: 12, image: "vietnam")
+    ]
+    
+    static func getCards(from settings: Settings) -> [Card] {
+        let count = settings.difficulty.cardsCount()
+        var cards: [Card]
+        switch settings.cardSet {
+        case .flags:
+            cards = flagsCardSet
+        case .pokemon:
+            cards = pokemonCardSet
+        }
+        return (cards[..<(count/2)] + cards[..<(count/2)]).shuffled()
+    }
+    
     static func getPokemonGameCards(count: Int) -> [Card] {
         return (Card.pokemonCardSet[..<(count/2)] + Card.pokemonCardSet[..<(count/2)]).shuffled()
     }

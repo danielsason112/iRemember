@@ -2,6 +2,12 @@ import Foundation
 
 struct Settings {
     var difficulty: Difficulty
+    var cardSet: CardSet
+}
+
+enum CardSet: Int {
+    case pokemon
+    case flags
 }
 
 enum Difficulty: Int, CaseIterable {
@@ -46,7 +52,7 @@ enum Difficulty: Int, CaseIterable {
 }
 
 extension Settings {
-    static var defaultSettings = Settings(difficulty: .easy)
+    static var defaultSettings = Settings(difficulty: .easy, cardSet: .pokemon)
     
     static func update(newSettings: Settings) {
         Self.defaultSettings = newSettings
