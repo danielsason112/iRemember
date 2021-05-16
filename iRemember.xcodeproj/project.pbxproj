@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2312AAC9264C5C7900BE46E6 /* GameInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2312AAC8264C5C7900BE46E6 /* GameInfoView.swift */; };
 		2312AACB264C5C8C00BE46E6 /* GameWonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2312AACA264C5C8C00BE46E6 /* GameWonView.swift */; };
+		23140DA826506DB400C54CAD /* UserDefaultsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23140DA726506DB400C54CAD /* UserDefaultsData.swift */; };
 		231CE91E264D9537009219AE /* CardsCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231CE91D264D9537009219AE /* CardsCollectionViewDelegate.swift */; };
 		23456DCD264C239700F4BC3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23456DCC264C239700F4BC3C /* AppDelegate.swift */; };
 		23456DCF264C239700F4BC3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23456DCE264C239700F4BC3C /* SceneDelegate.swift */; };
@@ -22,6 +23,13 @@
 		23456E03264C2B8900F4BC3C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23456E02264C2B8900F4BC3C /* Card.swift */; };
 		23456E06264C2C0F00F4BC3C /* CardCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23456E05264C2C0F00F4BC3C /* CardCellView.swift */; };
 		23456E09264C2D7300F4BC3C /* CardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23456E08264C2D7300F4BC3C /* CardDataSource.swift */; };
+		236F9F0A264DBFC400606E01 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F9F09264DBFC400606E01 /* Settings.swift */; };
+		236F9F0C264DC06C00606E01 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F9F0B264DC06C00606E01 /* SettingsViewController.swift */; };
+		236F9F0E264DD07000606E01 /* HighScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F9F0D264DD07000606E01 /* HighScoresViewController.swift */; };
+		236F9F10264DD11B00606E01 /* WaitingForLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F9F0F264DD11B00606E01 /* WaitingForLocationView.swift */; };
+		236F9F14264DE38600606E01 /* HighScoreListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F9F13264DE38600606E01 /* HighScoreListDataSource.swift */; };
+		236F9F16264DE51800606E01 /* HighScoreCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F9F15264DE51800606E01 /* HighScoreCellView.swift */; };
+		236F9F18264DE5B800606E01 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F9F17264DE5B800606E01 /* Score.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,7 @@
 /* Begin PBXFileReference section */
 		2312AAC8264C5C7900BE46E6 /* GameInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoView.swift; sourceTree = "<group>"; };
 		2312AACA264C5C8C00BE46E6 /* GameWonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWonView.swift; sourceTree = "<group>"; };
+		23140DA726506DB400C54CAD /* UserDefaultsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsData.swift; sourceTree = "<group>"; };
 		231CE91D264D9537009219AE /* CardsCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		23456DC9264C239700F4BC3C /* iRemember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRemember.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23456DCC264C239700F4BC3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +72,13 @@
 		23456E02264C2B8900F4BC3C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		23456E05264C2C0F00F4BC3C /* CardCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellView.swift; sourceTree = "<group>"; };
 		23456E08264C2D7300F4BC3C /* CardDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDataSource.swift; sourceTree = "<group>"; };
+		236F9F09264DBFC400606E01 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		236F9F0B264DC06C00606E01 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		236F9F0D264DD07000606E01 /* HighScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresViewController.swift; sourceTree = "<group>"; };
+		236F9F0F264DD11B00606E01 /* WaitingForLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingForLocationView.swift; sourceTree = "<group>"; };
+		236F9F13264DE38600606E01 /* HighScoreListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreListDataSource.swift; sourceTree = "<group>"; };
+		236F9F15264DE51800606E01 /* HighScoreCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreCellView.swift; sourceTree = "<group>"; };
+		236F9F17264DE5B800606E01 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +175,8 @@
 			children = (
 				23456DFD264C299900F4BC3C /* MenuViewController.swift */,
 				23456DFF264C2A7500F4BC3C /* GameViewController.swift */,
+				236F9F0B264DC06C00606E01 /* SettingsViewController.swift */,
+				236F9F0D264DD07000606E01 /* HighScoresViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				23456E02264C2B8900F4BC3C /* Card.swift */,
+				236F9F09264DBFC400606E01 /* Settings.swift */,
+				236F9F17264DE5B800606E01 /* Score.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +197,8 @@
 				23456E05264C2C0F00F4BC3C /* CardCellView.swift */,
 				2312AAC8264C5C7900BE46E6 /* GameInfoView.swift */,
 				2312AACA264C5C8C00BE46E6 /* GameWonView.swift */,
+				236F9F0F264DD11B00606E01 /* WaitingForLocationView.swift */,
+				236F9F15264DE51800606E01 /* HighScoreCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				23456E08264C2D7300F4BC3C /* CardDataSource.swift */,
+				236F9F13264DE38600606E01 /* HighScoreListDataSource.swift */,
+				23140DA726506DB400C54CAD /* UserDefaultsData.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -319,7 +343,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				236F9F18264DE5B800606E01 /* Score.swift in Sources */,
 				2312AAC9264C5C7900BE46E6 /* GameInfoView.swift in Sources */,
+				236F9F14264DE38600606E01 /* HighScoreListDataSource.swift in Sources */,
 				23456E00264C2A7500F4BC3C /* GameViewController.swift in Sources */,
 				23456E03264C2B8900F4BC3C /* Card.swift in Sources */,
 				23456DCD264C239700F4BC3C /* AppDelegate.swift in Sources */,
@@ -327,8 +353,14 @@
 				23456E09264C2D7300F4BC3C /* CardDataSource.swift in Sources */,
 				23456DCF264C239700F4BC3C /* SceneDelegate.swift in Sources */,
 				23456DFE264C299900F4BC3C /* MenuViewController.swift in Sources */,
+				236F9F16264DE51800606E01 /* HighScoreCellView.swift in Sources */,
 				231CE91E264D9537009219AE /* CardsCollectionViewDelegate.swift in Sources */,
+				23140DA826506DB400C54CAD /* UserDefaultsData.swift in Sources */,
+				236F9F0A264DBFC400606E01 /* Settings.swift in Sources */,
 				23456E06264C2C0F00F4BC3C /* CardCellView.swift in Sources */,
+				236F9F10264DD11B00606E01 /* WaitingForLocationView.swift in Sources */,
+				236F9F0E264DD07000606E01 /* HighScoresViewController.swift in Sources */,
+				236F9F0C264DC06C00606E01 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

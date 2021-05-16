@@ -1,11 +1,14 @@
 import UIKit
 
 class GameViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    static let newScoresSeugeIdentifier = "NewScoreSegue"
+    
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var gameInfoView: GameInfoView!
     @IBOutlet var gameWonView: GameWonView!
     @IBOutlet var nameField: UITextField!
     
+    private var settings = Settings.defaultSettings
     private var cardDataSource: CardDataSource?
     private var cardsCollectionViewDelegete: CardsCollectionViewDelegate?
     private var cardToMatchIndex: Int = -1
@@ -16,7 +19,8 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cardDataSource = CardDataSource(cards: Card.getPokemonGameCards(count: 16), cardButtonAction: self.cardButtonAction)
+        let cardsCount = settings.difficulty.cardsCount()
+        cardDataSource = CardDataSource(cards: Card.getPokemonGameCards(count: cardsCount), cardButtonAction: self.cardButtonAction)
         cardsCollectionViewDelegete = CardsCollectionViewDelegate()
         collectionView.dataSource = cardDataSource
         collectionView.delegate = cardsCollectionViewDelegete
@@ -25,6 +29,14 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         timer?.invalidate()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Self.newScoresSeugeIdentifier {
+            let destination = segue.destination as? HighScoresViewController
+            let score = Score(name: nameField.text ?? "Player", tries: moves, time: timeCounter)
+            destination?.configure(score: score)
+        }
     }
     
     @objc func tick() {
@@ -37,7 +49,7 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cardDataSource?.matchCard(at: matchedIndex)
         matches += 1
         
-        if matches == 16 / 2 {
+        if matches == settings.difficulty.cardsCount() / 2 {
             timer?.invalidate()
             UIView.transition(with: gameWonView, duration: 0.5, options: .transitionCrossDissolve, animations: {
                 self.gameWonView.isHidden = false
@@ -75,30 +87,5 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 }
             }
         }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                          layout collectionViewLayout: UICollectionViewLayout,
-                          sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let columns: CGFloat = 4
-        let spacing: CGFloat = 5
-        let horSpacing = (columns - 1) * spacing
-
-        let itemWidth = (collectionView.bounds.width - horSpacing) / columns
-
-        return CGSize(width: itemWidth, height: itemWidth)
-    }
-
-    func collectionView(_ collectionView: UICollectionView,
-                          layout collectionViewLayout: UICollectionViewLayout,
-                          minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
-    }
-
-    func collectionView(_ collectionView: UICollectionView,
-                          layout collectionViewLayout: UICollectionViewLayout,
-                          minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
-    
     }
 }
